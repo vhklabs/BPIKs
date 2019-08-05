@@ -37,14 +37,14 @@ Blockchain Protocol Implements Kits,区块链协议实现参考工具包。
 com.vhklabs.ecdsa.utils.BitcoinUtil.java    bitcoin协议构建工具
 
 ```java
-String getTxIndex(int index)						unspend tx索引序列化
-String getTxNumber(int num)							inputs或outputs数量序列化
-String getLength(int num)							长度数量序列化
-String satoshi2HEX(long satoshis)					btc数量序列化
-String btc2HEX(double btc)							btc数量序列化
-String littleEndian(String hex)						返回little endian(低字节序)
-String derSignature(String[] signature)				DER-encoded signature
-String address2scriptpubkey(String to)				地址解析成OPCODE Script	
+String getTxIndex(int index)			unspend tx索引序列化
+String getTxNumber(int num)			inputs或outputs数量序列化
+String getLength(int num)			长度数量序列化
+String satoshi2HEX(long satoshis)			btc数量序列化
+String btc2HEX(double btc)			btc数量序列化
+String littleEndian(String hex)			返回little endian(低字节序)
+String derSignature(String[] signature)			DER-encoded signature
+String address2scriptpubkey(String to)			地址解析成OPCODE Script	
 ```
 
 com.vhklabs.ecdsa.rlp.*   							ethereum rlp
@@ -55,14 +55,14 @@ com.vhklabs.ecdsa.ECDSAcore.java           椭圆曲线私钥公钥签名验证
 
 ```
 String[] sign(String message,String privateKey)		签名
-String[] formatSign(String[] signature)				签名DER-encoded标准
-boolean isValidSignature(BigInteger r,BigInteger s)	验证签名正确性，兼容Ethereum,符合BIP0062
-void verify(String message,String rS,String sS,Point publicKeyPoint)	验证
-Point fastMultiply(BigInteger d)					椭圆曲线快速乘法
-Point add(Point pointG,Point pointQ)				椭圆曲线加法
-Point times2(Point pointG)							椭圆曲线乘法
-boolean inPointOnCurve(Point point)					判断坐标点是否在椭圆曲线上
-Point fastMultiplyWithPoint(BigInteger d,Point pointG)	椭圆曲线非G点快速乘法
+String[] formatSign(String[] signature)		签名DER-encoded标准
+boolean isValidSignature(BigInteger r,BigInteger s)		验证签名正确性，兼容Ethereum,符合BIP0062
+void verify(String message,String rS,String sS,Point publicKeyPoint)		验证
+Point fastMultiply(BigInteger d)		椭圆曲线快速乘法
+Point add(Point pointG,Point pointQ)		椭圆曲线加法
+Point times2(Point pointG)		椭圆曲线乘法
+boolean inPointOnCurve(Point point)		判断坐标点是否在椭圆曲线上
+Point fastMultiplyWithPoint(BigInteger d,Point pointG)		椭圆曲线非G点快速乘法
 ```
 
 com.vhklabs.ecdsa.Point.java					  椭圆曲线点坐标
@@ -72,10 +72,10 @@ com.vhklabs.ecdsa.BitcoinTransaction.java	 bitcoin raw transaction build&sign
 com.vhklabs.ecdsa.utils.PrivateKeyUtil.java     私钥工具
 
 ```java
-String getEthereumAddress(String priv)    			获取以太坊地址 EIP55
-String getBtcMainNetAddress(String priv)			获取btc主网地址
-String getBtcTestNetAddress(String priv)			获取btc测试网地址
-String getUnCompressedPublicKey(Point publicKey)	转换公钥为非压缩格式输出
+String getEthereumAddress(String priv)		获取以太坊地址 EIP55
+String getBtcMainNetAddress(String priv)		获取btc主网地址
+String getBtcTestNetAddress(String priv)		获取btc测试网地址
+String getUnCompressedPublicKey(Point publicKey)		转换公钥为非压缩格式输出
 String getCompressedPublicKey(Point publicKey)		转换公钥为压缩格式输出		
 ```
 
